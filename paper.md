@@ -1,14 +1,37 @@
 
 ---
-# *shinyssd v1.0*: Species Sensitivity Distributions for Ecotoxicological Risk Assessment  
----
-D'Andrea, MF; Brodeur, JC
+title: 'shinyssd v1.0: Species Sensitivity Distributions for Ecotoxicological Risk Assessment'  
+tags:
+  - R
+  - ecotoxicological risk assessment
+  - shiny app
+  - toxicology
+  - environmental managment  
+  
+authors:
+  - name: María Florencia D’Andrea
+    orcid: 0000-0002-0041-097X
+    affiliation: "1,2"
+  - name: Julie Céline Brodeur
+    orcid: 0000-0001-5408-6645
+    affiliation: "1,2"
 
-## Summary
+affiliations:
+ - name: Consejo de Investigaciones Científicas y Técnicas (CONICET)
+   index: 1
+ - name: Instituto Nacional de Tecnología Agropecuaria (INTA)
+   index: 2
+
+date: May 29, 2018  
+bibliography: paper.bib
+
+---
+
+# Summary
 
 Living organisms have different sensitivities to toxicants. This variability can be represented by constructing a species sensitivity distribution (SSD) curve, whereby the toxicity of a substance to a group of species is described by a statistical distribution. Building the SSD curve allows calculating the Hazard Concentration HC5, that is, the concentration at which 5% of the considered species are affected. The HC5 is widely used as an environmental quality criterion and a tool for ecological risk assessment (@posthuma2001).
 
-The **ShinySSD** web application is a versatile and easy to use tool that serves to simultaneously model the SSD curve of a user-defined toxicity dataset based on four different statistical distribution models (log-normal, log-logistic, Weibull, Pareto).  ShinySSD directly calculates three estimators HC1, HC5 and HC10 associated to the four distribution models together with its confidence intervals, allowing the user to select the statistical distribution and associated HC values that best adjust the dataset. 
+The **shinyssd** web application is a versatile and easy to use tool that serves to simultaneously model the SSD curve of a user-defined toxicity dataset based on four different statistical distribution models (log-normal, log-logistic, Weibull, Pareto).  ShinySSD directly calculates three estimators HC1, HC5 and HC10 associated to the four distribution models together with its confidence intervals, allowing the user to select the statistical distribution and associated HC values that best adjust the dataset. 
 
 The level of confidence of the results obtained from a SSD curve will depend on the number of species used to produce the SSD. In this sense, the first tab of the user interface is used for visualizing the number of species for which toxicological data are available for each toxicant , species group and endpoint combination in the uploaded dataset. A minimum of species is necessary to build a SSD curve varies according to the literature (@belanger2016, @efsa2013, @wheeler2002, @newman2000).
 
@@ -16,7 +39,7 @@ After selecting the toxicant and species groups, the user can filter and select 
 
 By facilitating and streamlining toxicity data analysis and the creation of SSD curves, the user interface proposed here should be useful for environmental managers and regulators conducting ecological risk assessments and scientific research.
 
-## Information for Users
+# Information for Users
 
 - ShinySSD includes a preloaded database with aquatic toxicological data for the pesticides Cypermethrin and Glyphosate. This data was extracted of the ECOTOX database of the Environmental Agency of the United States (EPA) [link](https://cfpub.epa.gov/ecotox/). An external separated by commas file (.csv) could be uploaded by the user according to the format of the ``template.csv`` file attached in the repo. 
 
@@ -35,9 +58,9 @@ library(shinyssd)
 shinyssd::shinyssd_run()
 ```
 
-The source code for ``shinySSD`` has been archived to Zenodo with the linked DOI:10.5281/zenodo.1470880
+The source code for ``shinyssd`` has been archived to Zenodo with the linked DOI: 10.5281/zenodo.1470880
 
-## Community guidelines
+# Community guidelines
 
 Report Issues:
 
@@ -47,10 +70,14 @@ Contribution to the software:
 
 - Please open an issue in the issue tracker of the project that describes the changes you would like to make to the software and open a pull request with the changes. The description of the pull request must references the corresponding issue.
 
-## Acknowledgements
+# Acknowledgements
 
-We wish to thank the R community and R-Ladies or their help and support.
+We wish to thank the R community and R-Ladies for their help and support.
  
-## How to use shinyssd? / ¿Cómo usar shinyssd? (in Spanish)
+# References
 
-![imagen_shiny](https://github.com/flor14/shinyssd/blob/master/shinyssd/imagen_shiny.png)
+
+
+
+
+
